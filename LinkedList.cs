@@ -11,6 +11,28 @@ namespace LinkedListProblem
     {
         public Node head;
 
+        internal void Append(int data)
+        {
+            Node node = new Node(data);
+
+            if (this.head == null)
+            {
+                this.head = node;
+            }
+            else
+            {
+                Node temp = head;
+
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+
+                temp.next = node;
+            }
+            Console.WriteLine(node.data + " appended to the Linked List");
+        }
+
         public void Add(int data)
         {
             Node node = new Node(data);
@@ -29,7 +51,7 @@ namespace LinkedListProblem
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} inserted into linked list ", node.data);
+            Console.WriteLine("{0} Added to linked list ", node.data);
         }
 
         public void Display()
