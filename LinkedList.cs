@@ -9,7 +9,6 @@ namespace LinkedListProblem
 {
     public class LinkedList
     {
-        {
         public Node head;
         public void Add(int data)
         {
@@ -46,4 +45,3 @@ namespace LinkedListProblem
         }
     }
 }
- 
