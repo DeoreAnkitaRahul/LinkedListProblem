@@ -19,7 +19,6 @@ namespace LinkedListProblem
             {
                 Console.WriteLine("Invalid position");
             }
-           
             if (position == 1)
             {
                 newNode.next = head;
@@ -27,25 +26,17 @@ namespace LinkedListProblem
             }
             else
             {
-                //Declaring count to count starting from 2 the position
                 int currentPosition = 1;
-                //Declaring temporary head tempHead to parse throu the list
                 Node tempHead = head;
-                //while count does not get to the entered position where we want to add our node
                 while (currentPosition++ != position)
                 {
-                    //If our count variable is at entered position
                     if (currentPosition == position)
                     {
-                        //Assigning newNode's next to tempHead's next, the position at which we want to insert node
                         newNode.next = tempHead.next;
-
-                        //Assigning previous node's (here tempHead) next to newNode
                         tempHead.next = newNode;
                         Console.WriteLine(newNode.data + " is added at position " + position);
                         break;
                     }
-                    //Moving the position of tempHead to the next node
                     tempHead = tempHead.next;
                 }
                 if (currentPosition != position)
@@ -76,6 +67,17 @@ namespace LinkedListProblem
             Console.WriteLine("{0} Added to linked list ", node.data);
         }
 
+        internal void Pop()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty");
+                return;
+            }
+            Console.WriteLine("The first node having data " + head.data + " is deleted from the list");
+            head = head.next;
+        }
+
         public void Display()
         {
             Node temp = this.head;
@@ -93,3 +95,4 @@ namespace LinkedListProblem
         }
     }
 }
+
