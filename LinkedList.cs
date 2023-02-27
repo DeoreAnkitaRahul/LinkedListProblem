@@ -10,6 +10,7 @@ namespace LinkedListProblem
     public class LinkedList
     {
         public Node head;
+
         public void Add(int data)
         {
             Node node = new Node(data);
@@ -21,6 +22,7 @@ namespace LinkedListProblem
             else
             {
                 Node temp = head;
+
                 while (temp.next != null)
                 {
                     temp = temp.next;
@@ -29,19 +31,21 @@ namespace LinkedListProblem
             }
             Console.WriteLine("{0} inserted into linked list ", node.data);
         }
+
         public void Display()
         {
             Node temp = this.head;
             if (temp == null)
             {
-                Console.WriteLine("Linkedlist is empty");
+                Console.WriteLine("Linked list is empty");
                 return;
             }
             while (temp != null)
             {
-                Console.WriteLine(temp.data + " ");
+                Console.Write(temp.data + " ");
                 temp = temp.next;
             }
+
         }
     }
 }
