@@ -13,9 +13,8 @@
             linked.Add(70);
             linked.Display();
 
-            Console.WriteLine("After Poping First element..");
-
-            linked.Pop();
+            Console.WriteLine("\n------------Deleting last node--------------");
+            linked.PopLast();
             linked.Display();
         }
     }
