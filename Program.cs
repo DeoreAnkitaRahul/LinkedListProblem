@@ -13,9 +13,11 @@
             linked.Add(70);
             linked.Display();
 
-            Console.WriteLine("\n------------Deleting last node--------------");
-            linked.PopLast();
-            linked.Display();
+            //Console.WriteLine("\n------------Deleting last node--------------");
+            //linked.PopLast();
+            //linked.Display();
+            
+            linked.Search(30);
         }
     }
 
