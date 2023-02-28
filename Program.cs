@@ -10,14 +10,15 @@
             LinkedList linked = new LinkedList();
             linked.Add(56);
             linked.Add(30);
+            linked.Add(40);
             linked.Add(70);
             linked.Display();
 
-            //Console.WriteLine("\n------------Deleting last node--------------");
-            //linked.PopLast();
-            //linked.Display();
-            
-            linked.Search(30);
+            linked.DeleteValue(40);
+            linked.Display();
+            linked.Size();
+
+
         }
     }
 
